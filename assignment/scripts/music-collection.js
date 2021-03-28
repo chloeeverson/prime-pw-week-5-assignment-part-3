@@ -20,4 +20,14 @@ console.log(addToCollection('Teens Of Denial', 'Car Seat Headrest' , 2016));
 console.log(addToCollection('Love What Survives', 'Mount Kimbie' , 2017));
 //called function - made albums and returned them to Console
 console.log('album collection:' , collection);
-//logged collection to console 
+console.log()
+//logged collection to console
+function showCollection(array){
+  console.log('number of albums in collection:' , array.length);
+  for (album of array){
+    console.log(album.title , 'by' , album.artist + ',' , 'published in' , album.yearPublished);
+  }
+}
+//function for logging all of a collection's albums' information in sentence form.
+
+showCollection(collection);
