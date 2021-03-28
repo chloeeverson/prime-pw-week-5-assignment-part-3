@@ -31,3 +31,21 @@ function showCollection(array){
 //function for logging all of a collection's albums' information in sentence form.
 
 showCollection(collection);
+//tested function by running function with collection array
+
+function findByArtist(artist){
+  let artistArray = [];
+  for (album of collection){
+    if (album.artist === artist){
+      artistArray.push(album);
+    }
+  }
+  return artistArray;
+}
+//function for showing albums by a certain artist in collection. returns the albums when call function with artist.
+
+console.log('Albums by Odesza, expect two of them:' , findByArtist('Odesza'));
+console.log('Albums by Frank Ocean, expect one of them:' , findByArtist('Frank Ocean'));
+console.log('Albums by Sylvan Esso. Should expect empty array:' , findByArtist('Sylvan Esso'));
+console.log('Albums by Janet Jackson. Should expect empty array:' , findByArtist('Janet Jackson'));
+//tested findByArtist function by calling different artists in function - both artists that are in function and artist that aren't
